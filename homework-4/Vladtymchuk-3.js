@@ -80,3 +80,15 @@ class Warrior {
         }
     }
 }
+
+const warrior1 = new Warrior();
+
+console.log("Warrior 1 Level:", warrior1.level());
+console.log("Warrior 1 Experience:", warrior1.experience());
+
+console.log(warrior1.training(["Completed a mission", 150, 2]));
+console.log(warrior1.training(["Completed a mission", 150, 1]));
+
+console.log("Warrior 1 Level:", warrior1.level());
+console.log("Warrior 1 Experience:", warrior1.experience());
+
