@@ -1,4 +1,4 @@
-var Vector = function (components) {
+const Vector = function (components) {
     this.components = components;
 
     this.add = function (other) {
@@ -6,8 +6,8 @@ var Vector = function (components) {
             throw new Error("Vectors must have the same length for addition.");
         }
 
-        var result = [];
-        for (var i = 0; i < this.components.length; i++) {
+        const result = [];
+        for (let i = 0; i < this.components.length; i++) {
             result.push(this.components[i] + other.components[i]);
         }
 
@@ -19,8 +19,8 @@ var Vector = function (components) {
             throw new Error("Vectors must have the same length for subtraction.");
         }
 
-        var result = [];
-        for (var i = 0; i < this.components.length; i++) {
+        const result = [];
+        for (let i = 0; i < this.components.length; i++) {
             result.push(this.components[i] - other.components[i]);
         }
 
@@ -32,8 +32,8 @@ var Vector = function (components) {
             throw new Error("Vectors must have the same length for dot product.");
         }
 
-        var result = 0;
-        for (var i = 0; i < this.components.length; i++) {
+        let result = 0;
+        for (let i = 0; i < this.components.length; i++) {
             result += this.components[i] * other.components[i];
         }
 
@@ -41,7 +41,7 @@ var Vector = function (components) {
     };
 
     this.norm = function () {
-        var sumOfSquares = this.components.reduce(function (acc, component) {
+        const sumOfSquares = this.components.reduce(function (acc, component) {
             return acc + component * component;
         }, 0);
         return Math.sqrt(sumOfSquares);
@@ -56,7 +56,7 @@ var Vector = function (components) {
             return false;
         }
 
-        for (var i = 0; i < this.components.length; i++) {
+        for (let i = 0; i < this.components.length; i++) {
             if (this.components[i] !== other.components[i]) {
                 return false;
             }
@@ -66,9 +66,9 @@ var Vector = function (components) {
     };
 };
 console.log("");
-var a = new Vector([1, 2, 3]);
-var b = new Vector([3, 4, 5]);
-var c = new Vector([5, 6, 7]);
+const a = new Vector([1, 2, 3]);
+const b = new Vector([3, 4, 5]);
+const c = new Vector([5, 6, 7]);
 
 console.log(a.add(b).toString());
 console.log(a.subtract(b).toString());

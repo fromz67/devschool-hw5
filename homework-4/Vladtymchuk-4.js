@@ -30,7 +30,7 @@ class PaginationHelper {
     }
 }
 
-var helper = new PaginationHelper(['a', 'b', 'c', 'd', 'e', 'f'], 4);
+const helper = new PaginationHelper(['a', 'b', 'c', 'd', 'e', 'f'], 4);
 
 console.log(helper.pageCount());
 console.log(helper.itemCount());
