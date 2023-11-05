@@ -65,7 +65,7 @@ var Vector = function (components) {
         return true;
     };
 };
-
+console.log("");
 var a = new Vector([1, 2, 3]);
 var b = new Vector([3, 4, 5]);
 var c = new Vector([5, 6, 7]);
